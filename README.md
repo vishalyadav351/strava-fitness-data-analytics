@@ -62,9 +62,27 @@ GROUP BY Id
 ORDER BY unworn_days DESC;
 ```
 
-##📊 Key Findings & Analytical Insights
+## 📊 Key Findings & Analytical Insights
+
 Average Daily Step Deficit: Participants averaged 7,638 steps/day, missing the CDC-recommended threshold of 10,000 steps[cite: 1].Weekly Activity Pattern: Step counts peak on Tuesday (~8,125 steps) and Saturday (~8,153 steps), dropping to a weekly low on Sunday (~6,933 steps)[cite: 1].Sedentary Trap: Users spend an average of 991.2 minutes (~16.5 hours) per day sedentary[cite: 1]. Active exercise accounts for only ~2% of daily tracked time[cite: 1].Caloric Peak Window: Caloric burn peaks sharply between 5:00 PM and 7:00 PM (reaching ~123 kcal/hour), coinciding with post-work workouts and commutes[cite: 1].Sleep Quality Gaps: Average sleep duration is 419.2 minutes (~7.0 hours) against 458.5 minutes in bed, indicating an average of ~39 minutes of sleep latency / restless wakefulness[cite: 1]
-##💻 Power BI Executive Dashboard Architecture
+## 💻 Power BI Executive Dashboard Architecture
+
 The dashboard implements an executive Cyber-Glow Dark Bento Grid layout using a custom JSON theme:Page 1: Activity OverviewKPI Cards: Total Trackers (33), Daily Avg Steps (7.64K), Calories (2.30K), Sedentary Time (991.2 mins).   Visuals: Day-of-Week Steps Column Chart, Hourly Calorie Spike Area Curve, Interactive Weekday Tile Slicers.   Page 2: Sleep & Sedentary Deep-DiveVisuals: Sleep Latency Scatter Plot (TimeInBed vs MinutesAsleep), Intensity Distribution Donut Chart, Participant-level Sedentary Heatmap Matrix.   Page 3: Business Strategy & RecommendationsConsolidated metrics connected with strategic marketing and product design initiatives.
 ##  💡 Strategic Recommendations for Bellabeat / Strava
 Auto On-Body Detection (Hardware/Firmware):Incorporate capacitive skin sensors or PPG detection to distinguish between stationary nightstand periods and biological rest, preventing distorted sedentary analytics[cite: 1].Haptic Inactivity Nudges (App Feature):Trigger gentle 250-step reminders when inactivity exceeds 60–90 consecutive minutes during waking hours to combat the observed 81% sedentary time[cite: 1].Evening Sprint & Sunday Reset (Marketing Campaigns):Align live workout challenges with the natural 5:00 PM – 7:00 PM peak activity window[cite: 1]. Launch light walking or yoga "Sunday Stride" campaigns to address the weekly Sunday slump[cite: 1].
+## 🚀 How to Run Locally
+git clone [https://github.com/vishalyadav351/strava-fitness-data-analytics.git](https://github.com/vishalyadav351/strava-fitness-data-analytics.git)
+cd strava-fitness-data-analytics
+
+## 2. Setup Python environment and clean data
+pip install pandas numpy
+python step1_clean.py
+## 3. Open Dashboard in Power BI
+Open strava_fitness_dashboard.pbix in Power BI Desktop.
+
+Refresh data sources to point to your local clean_*.csv files if necessary.
+
+## 👤 Author
+Vishal Yadav
+
+GitHub: @vishalyadav351
